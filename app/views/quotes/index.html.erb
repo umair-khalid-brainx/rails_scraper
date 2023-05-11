@@ -1,0 +1,13 @@
+<h1 class="h1 m-2">Quotes</h1>
+<% @quotes.each do |quote| %>
+  <div class="m-3">
+    <p class="m-1"><%= quote.content %></p>
+    <p class="m-1">By: <%= quote.author %></p>
+    <p class="m-1">Tags</p>
+    <ul>
+      <% quote.tags.split("\n").each do |tag| %>
+        <li><%= tag %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
